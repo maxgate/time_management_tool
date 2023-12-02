@@ -8,7 +8,7 @@ const createSchedule = (item) => {
           >          
             ${item.time_manager_title}
           </div>
-          <div class="col-md-2 col-lg-4  bg-light rounded-bottom shadow text-center small pt-3 pb-2">
+          <div class=" line col-md-2 col-lg-4  bg-light rounded-bottom shadow text-center small pt-2 pb-2" >
             ${item.time_manager_message}
           </div>
         </div>

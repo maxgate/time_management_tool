@@ -1,0 +1,24 @@
+section {
+  padding: 60px 0;
+}
+
+img {
+  height: 500px;
+}
+
+.create {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  /* width: 200%; */
+  flex-wrap: wrap;
+}
+
+.line {
+  display: -webkit-box;
+  /* width: 100px; */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}

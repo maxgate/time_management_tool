@@ -21,5 +21,5 @@ schedule.addEventListener("click", () => {
   ];
   localStorage.setItem("todos", JSON.stringify(newTodoArray));
 
-  window.location.href = "./index.html";
+  window.location.href = "../index.html";
 });
