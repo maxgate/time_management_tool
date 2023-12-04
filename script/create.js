@@ -36,11 +36,8 @@ function createNewSchedule() {
   const todos = localStorage.getItem("todos");
   JSON.parse(todos).forEach((item) => {
     createSchedule(item);
-    // localStorage.clear();
-    // // todos = "";
   });
 }
-
 createNewSchedule();
 
 ////////////////////////////
@@ -53,15 +50,3 @@ const clearBtn = (id) => {
   deleteBtn = getItem.filter((item) => item.id !== id);
   localStorage.setItem("todos", JSON.stringify(deleteBtn));
 };
-
-// clear.forEach((e, id) => {
-//   e.addEventListener("click", clearBtn(id));
-// });
-
-// clear.forEach((id) => {
-// const anotherTodo = JSON.parse(todos);
-// anotherTodo.pop((item) => {
-//   item.id != id;
-// });
-// console.log(anotherTodo);
-// });
