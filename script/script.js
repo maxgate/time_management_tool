@@ -1,7 +1,7 @@
 const schedule = document.getElementById("mov");
 // const clear = document.querySelectorAll(".clear");
 
-const createTodosStoragse = () => {
+const createTodosStorage = () => {
   const item = localStorage.getItem("todos");
   if (!item) {
     localStorage.setItem("todos", JSON.stringify([]));
@@ -9,7 +9,7 @@ const createTodosStoragse = () => {
 };
 
 schedule.addEventListener("click", () => {
-  createTodosStoragse();
+  createTodosStorage();
 
   const todos = localStorage.getItem("todos");
   const todoArray = JSON.parse(todos);
