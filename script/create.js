@@ -14,7 +14,7 @@ const createSchedule = (item) => {
             ${item.time_manager_message}
         </div>
         <div>
-          <button class="clear btn btn-danger mx-sm-5 mx-s mx-md-2 my-2  mx-lg-5 small  fw-bold" onClick=clearBtn(${item.id}) >clear</button>
+          <button class="clear btn btn-danger mx-sm-5 mx-s mx-md-2 my-2  mx-lg-5 small  fw-bold" onClick=clearBtn(${item.id}) >Delete</button>
         </div>
       </div>
 `;
