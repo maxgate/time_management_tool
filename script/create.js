@@ -54,6 +54,7 @@ const clearBtn = (id) => {
   deleteBtn = getItem.filter((item) => item.id !== id);
   localStorage.setItem("todos", JSON.stringify(deleteBtn));
   clearHtml();
+  location.reload();
 };
 
 ///////// ClearHtml function /////
