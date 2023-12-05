@@ -62,8 +62,8 @@ const deleteHtml = document.querySelectorAll(".dlite");
 console.log(deleteHtml.length);
 
 const clearHtml = () => {
-  deleteHtml.forEach((x, index) => {
-    x.addEventListener("click", () => {
+  deleteHtml.forEach((deleteElement, index) => {
+    deleteElement.addEventListener("click", () => {
       console.log(x);
       if (index < deleteHtml.length) {
         deleteHtml[index].innerHTML = "";
