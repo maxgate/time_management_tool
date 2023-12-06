@@ -3,7 +3,7 @@ const displaySchedule = document.querySelector(".display");
 //////////////////// createSchedule function ///////////////
 const createSchedule = (item) => {
   const html = `
-      <div class=" dlite container-xxl justify-content-around align-content-center pt-5 col-4  small">
+      <div class=" dlite  justify-content-around align-content-center pt-5 col-4  small">
         <div
             class=" col-md-4  col-lg-4  rounded-top shadow text-center text-light pt-1 pb-1"
             style="background-color: #6664c2"
@@ -13,9 +13,25 @@ const createSchedule = (item) => {
         <div class=" line col-md-4 col-lg-4  bg-light rounded-bottom shadow text-center small pt-2 pb-2" >
             ${item.time_manager_message}
         </div>
-        <div>
-          <button class="clear btn btn-danger mx-sm-5 mx-s mx-md-2 my-2  mx-lg-5 small  fw-bold" onClick=clearBtn(${item.id}) >Delete</button>
+        <div class="container">
+        <div class="row" style="width: 150px; display: flex">
+          <div class="col-3">
+            <button
+              class="clear btn btn-danger mx-sm-5 mx-md-2 my-1 small fw-bold"
+              onClick="clearBtn(${item.id})"
+            >
+              Delete
+            </button>
+          </div>
+          <div class="col-5 my-1" style="margin-left: 38px">
+           <a
+           href="./editing-page/editPage.html"> 
+           <button class="btn btn-success col mx-sm-5 mx-md-2 small fw-bold">                   
+              Edit
+            </button> </a>
+          </div>
         </div>
+      </div>      
       </div>
 `;
 
