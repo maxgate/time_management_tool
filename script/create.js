@@ -92,16 +92,17 @@ const clearHtml = () => {
 const edit = document.querySelectorAll(".edit");
 edit.forEach((x) => {
   x.addEventListener("click", () => {
-    console.log("edit");
+    console.log(x);
+    edit.value = "editing";
     let getItem = JSON.parse(todos);
     console.log(getItem);
-    getItem.map((x) => {
-      console.log(x);
-      getItem = createNewSchedule();
-    });
-
-    // location.href("../editing-page/editPage.html");
+    // getItem.forEach((x, id) => {
+    //   if (id < x.length) {
+    //     getItem = id;
+    //     console.log(getItem);
+    //   }
+    // });
   });
+
+  // location.href("../editing-page/editPage.html");
 });
-
-
