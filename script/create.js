@@ -5,7 +5,7 @@ const createSchedule = (item) => {
   const html = `
       <div class=" dlite  justify-content-around align-content-center pt-5 col-4  small">
         <div
-            class=" col-md-4  col-lg-4  rounded-top shadow text-center text-light pt-1 pb-1"
+            class=" col-md-4 edit col-lg-4  rounded-top shadow text-center text-light pt-1 pb-1"
             style="background-color: #6664c2"
           >          
             ${item.time_manager_title}
@@ -25,7 +25,7 @@ const createSchedule = (item) => {
           </div>
           <div class="col-5 my-1" style="margin-left: 38px">
            <a
-           href="./editing-page/editPage.html"> 
+           >
            <button class="btn btn-success col mx-sm-5 mx-md-2 small fw-bold">                   
               Edit
             </button> </a>
@@ -88,3 +88,11 @@ const clearHtml = () => {
   });
 };
 /////////////////////////////////
+
+const edit = document.querySelectorAll(".edit");
+console.log(edit.value);
+edit.forEach((x) => {
+  x.addEventListener("click", () => {
+    console.log("edit");
+  });
+});
