@@ -5,7 +5,7 @@ const createSchedule = (item) => {
   const html = `
       <div class=" dlite  justify-content-around align-content-center pt-5 col-4  small">
         <div
-            class=" col-md-4 edit col-lg-4  rounded-top shadow text-center text-light pt-1 pb-1"
+            class=" col-md-4  col-lg-4  rounded-top shadow text-center text-light pt-1 pb-1"
             style="background-color: #6664c2"
           >          
             ${item.time_manager_title}
@@ -26,7 +26,7 @@ const createSchedule = (item) => {
           <div class="col-5 my-1" style="margin-left: 38px">
            <a
            >
-           <button class="btn btn-success col mx-sm-5 mx-md-2 small fw-bold">                   
+           <button class=" edit btn btn-success col mx-sm-5 mx-md-2 small fw-bold">                   
               Edit
             </button> </a>
           </div>
@@ -80,7 +80,7 @@ console.log(deleteHtml.length);
 const clearHtml = () => {
   deleteHtml.forEach((deleteElement, index) => {
     deleteElement.addEventListener("click", () => {
-      console.log(x);
+      console.log(deleteElement);
       if (index < deleteHtml.length) {
         deleteHtml[index].innerHTML = "";
       }
@@ -90,9 +90,18 @@ const clearHtml = () => {
 /////////////////////////////////
 
 const edit = document.querySelectorAll(".edit");
-console.log(edit.value);
 edit.forEach((x) => {
   x.addEventListener("click", () => {
     console.log("edit");
+    let getItem = JSON.parse(todos);
+    console.log(getItem);
+    getItem.map((x) => {
+      console.log(x);
+      getItem = createNewSchedule();
+    });
+
+    // location.href("../editing-page/editPage.html");
   });
 });
+
+
